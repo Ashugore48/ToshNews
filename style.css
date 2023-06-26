@@ -57,6 +57,7 @@ nav {
 .main-nav {
     justify-content: space-between;
     padding-block: 8px;
+    flex-wrap: wrap;
 }
 
 .company-logo img {
@@ -132,6 +133,7 @@ main {
     background-color: #fff;
     overflow: hidden;
     transition: all 0.3s ease;
+    margin-inline: 10px;
 }
 
 .card:hover {
@@ -211,4 +213,8 @@ footer {
   .fa-linkedin-in:hover{
     color: blue;
     cursor: pointer;
+  }
+
+  .left-right{
+    padding-inline: 10px;
   }
