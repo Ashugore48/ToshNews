@@ -1,7 +1,7 @@
 const API_KEY = "ccfc266674e94bfc999a2075d69435ea";
 const url = "https://newsapi.org/v2/everything?q=";
 
-window.addEventListener("load", () => fetchNews("Bollywood"));
+window.addEventListener("load", () => fetchNews("india"));
 
 function reload() {
     window.location.reload();
@@ -19,8 +19,10 @@ async function fetchNews(query) {
         }
     } catch (error) {
         console.error("Error fetching news:", error);
+        showErrorMessage("There was an error fetching the news. Please try again later.");
     }
 }
+
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
@@ -65,6 +67,12 @@ function onNavItemClick(id) {
     curSelectedNav = navItem;
     curSelectedNav.classList.add("active");
 }
+function showErrorMessage(message) {
+    const errorContainer = document.getElementById("error-container");
+    errorContainer.textContent = message;
+    errorContainer.style.display = "block";
+}
+
 
 const searchButton = document.getElementById("search-button");
 const searchText = document.getElementById("search-text");
