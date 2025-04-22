@@ -1,4 +1,4 @@
-const API_KEY = "ccfc266674e94bfc999a2075d69435ea";
+const API_KEY = "ccfc266674e94bfc999a2075d69435ea"; //Not a good practice but yeah who cares
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("india"));
